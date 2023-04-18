@@ -1,0 +1,88 @@
++Introdução HTML:
+	Elementos básicos do código:
+	Abre e fecha com a tag  de identificação do código: <html></html>
+	Seguem dois elementos dentro dos <html></html>: 
+* <head></head>: para o cabeçalho, onde carrega informações da abertura e carregamento da página,
+a definição do tipo de codificação, os arquivos ocmplementares e o até o proprio titulo da página.
+o Head ainda segue a <title></title> qye descreve o titulo da pagina. 
+* <body></body>:carrega o conteúdo da página como textos, imagens, vídeos e etc...
+
+ex:
+<html>
+	<head>
+		<title>Oi mundo!</title> 
+	</head>
+	<body> Aguardando a boa vontade...
+	</body>
+</html>
+
+
++Layout HTML (HTML5).
+	HTML5 toruxe novas tags  e elementos para desenvolvimento da página. são 4 as mais utilizadas
+(em suma usadas dentro de <body>):
+* <header> CABEÇALHO </header> -
+* <nav> MENU </nav> -
+* <section> SEÇÂO </section> -
+* <footer> RODAPÉ </footer> -
+
+Ex:
+<html>
+	<head>
+		<title>Oi mundo!</title> 
+	</head>
+	<body> 
+		<header> Cabeçalho </header> 
+		<nav> Menu </nav> 
+		<section> Seção </section> 
+		<footer> Rodapé </footer> 
+	</body>
+</html>
+
++ Formatação: 
+	Basicamente em CSS, mas ainda possuem algumas funções.
+* Tamanho das letras<header>: 	<h1>Título 1</h1>
+		 		<h2>Titulo 2</h2>
+				<h3>Título 3</h3>
+				<h4>Título 4</h4>
+				<h5>Título 5</h5>
+				<h6>Título 6</h6>
+* Quebra de linha:  Linha 1<br> 
+		    Linha 2<br>
+		    Linha 3<br>
+
+*Parágrafo: <p> Parágrafo 1</p>
+	    <p> Parágrafo 2</p>
+	    <p> Parágrafo 3</p>
+
+*Linha separadora: Linha 1<hr>
+		   Linha 2
+
+*Condições de letras: <b>Negrito</b>
+		      <i> Itálico</i>
+
+*Comentários: <!-- Comentário --> (informação não aparece para o usuário).
+
+Código Ex:
+<html>
+	<head>
+		<title>Oi mundo!</title> 
+	</head>
+	<body> 
+		<header><h1>Curso de HTML</h1></header> 
+		<!-- Aqui tem comentário --> 
+		<nav> Menu </nav><hr>
+		<section><p>Estou aprendendo sobre <b>HTML</b>.<br>
+		O <i>HTML</i> é composto de tags.</p>
+		</section> 
+		<footer> Rodapé </footer> 
+	</body>
+</html>
+
++ Links: endereçamento/ caracteristicas de uma pagina para outra
+	<a href="sobremim.html">Sobre mim:</a>
+ 	- Parâmetros de <a>:- donwload (para salvar arquivo para a máquina do usuário)
+			    - href (referência do hypertexto)
+			    - target:_blank, _parent, _seft, _top (para abrir em nova aba, ou dentro da mesma página etc)
+
+Ex: criar 3 páginas: index, sobremim e contato, cada uma com o link de direcionamento para a página seguinte:
+
