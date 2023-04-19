@@ -1,4 +1,5 @@
-+Introdução HTML:
+1 - HTML 
+1.1 - Introdução HTML (P01):
 	Elementos básicos do código:
 	Abre e fecha com a tag  de identificação do código: <html></html>
 	Seguem dois elementos dentro dos <html></html>: 
@@ -17,7 +18,7 @@ ex:
 </html>
 
 
-+Layout HTML (HTML5).
+1.3 - Layout HTML (HTML5).
 	HTML5 toruxe novas tags  e elementos para desenvolvimento da página. são 4 as mais utilizadas
 (em suma usadas dentro de <body>):
 * <header> CABEÇALHO </header> -
@@ -38,7 +39,7 @@ Ex:
 	</body>
 </html>
 
-+ Formatação: 
+1.6 - Formatação: 
 	Basicamente em CSS, mas ainda possuem algumas funções.
 * Tamanho das letras<header>: 	<h1>Título 1</h1>
 		 		<h2>Titulo 2</h2>
@@ -78,11 +79,78 @@ Código Ex:
 	</body>
 </html>
 
-+ Links: endereçamento/ caracteristicas de uma pagina para outra
+1.7 -  Links: endereçamento/ caracteristicas de uma pagina para outra
 	<a href="sobremim.html">Sobre mim:</a>
  	- Parâmetros de <a>:- donwload (para salvar arquivo para a máquina do usuário)
 			    - href (referência do hypertexto)
 			    - target:_blank, _parent, _seft, _top (para abrir em nova aba, ou dentro da mesma página etc)
 
 Ex: criar 3 páginas: index, sobremim e contato, cada uma com o link de direcionamento para a página seguinte:
+
+1.8 - listas(P02):
+- ordenadas: itens organizados em ordem crescente partindo do item 1.(tag <ol> para criar alista e <li> para descrever o item)
+- desordenadas: itens são ordenados de acordo com a ordem listada, sem identificação numeral(<ul> para alista e <li> para os itens) 
+- definição: identação dos itens(item -> subitens)(<dl> e <dt> para titulo do item e <dd> para os subitens
+------------------------------------------------------------------------------------------------------------------------
+1.11 - Imagens(P03):
+- Tag IMG -> <img src="imagem.png"> para inserir imagem segue essa formação da tag.
+parametros de imagens:
+- src = arquivo da imagem salva no pc que vai ser utilizada na página.
+- title = descrição em texto da imagem ao passar o mouse na imagem 
+-alt = caso haja algum problema de carregamento da imagem, uma mensagem descritiva sobre a imagem é exibida.
+- heigth = largura da imagem. 
+- width = comprimento da imagem.
+O tamanho da imagem (heigth e weidth podem ser utilizadas com tamanho em porcentagem(%) ou pixel(px)(em % a imagem 
+acompanha o tamnho do navegador. em px a imagem fica com tamanho fixado).
+
+1.12 - Áudio e vídeo:
+- Tag ÁUDIO -> <audio src="music.mp3" controls> </audio> 
+parametros para audio:
+- src = arquivo de audio salvo no pc que vai ser utilizada na página.
+- controls = exibição da barra de controle de execução do audio em questão.
+- autoplay = inicia a produção do audio já no carregamento da página. 
+- loop =  loop para execução seguidas vezes toda vez que chegar o fim da mídia
+- muted =  executa o arquivo em mudo
+- preload (auto, metadata, none) = para carregar as informações do arquivo em execução
+- width = largura da barra
+*** no HTML5 tem nova tag para suporte de varios formatos de audios para se adequar aos diversos navegadores
+<audio controls>(insere o arquivo e indica os formatos a seguir de acorodo com o formatos suportados pelo navegador.)
+	<source src="src/rushus-modal_blues.mp3" type="audio/mpeg"/>
+	ou
+	<source src="src/rushus-modal_blues.ogg" type"audio/ogg"/>
+	ou
+	</auio>  ->(seu o navegador não suporta tag áudio)
+- Tag VÍDEO -> <video src="video.mp4" width="400" controls></video>
+parametros para video:
+- src = arquivo de vídeo salvo no pc que vai ser utilizada na página.
+- controls = exibição da barra de controle de execução do vídeo em questão.
+- autoplay = inicia a produção do vídeo já no carregamento da página.
+- heigth = largura do reprodutor de mídia
+- width = largura do reprodutor de mídia
+- loop = loop para execução seguidas vezes toda vez que chegar o fim da mídia
+- muted = executa o arquivo em mudo
+- poster = 
+- preload (auto, metadata, none) = para carregar as informações do arquivo em execução
+
+*** no HTML5 tem nova tag para suporte de varios formatos de vídeo para se adequar aos diversos navegadores
+<video width="390px" id="clip" controls>
+	<source src="src/chome_japan.webm" type='video/webm;codecs="vp8, vorbis"'/>
+	<source src="src/chrome_japan.mp4" type='video/mp4;codecs="avc1.42E01E,mp4a.40.2"'/>
+	<source src="src/chrome_japan.ogv" type='video/ogg;codecs="theora,vorbis"'/>
+	Seu navegador não suporta tag video(ou link para video, ou imagem etc)</video>
+
+1.13 - Novas funcionalidades HTML5:
+- Detalhes:
+   Tag <datails> permite criar menus e informações ocultas, que ápos uma ação(ex: click) passa a exibir a informação.- 
+- Barra de progresso:	
+1ª Tag <meter> onde define o valor minimo e maximo, valor alto e baixo e o valor corrente
+	<meter min="0" max="100" low="40" high="90" optimum="100" value="90"></meter>
+2ª Tag <progress> é a barra de carregamento.
+	<progress></progress>
+
+
+
+
+
+
 
