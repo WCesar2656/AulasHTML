@@ -147,10 +147,151 @@ parametros para video:
 	<meter min="0" max="100" low="40" high="90" optimum="100" value="90"></meter>
 2ª Tag <progress> é a barra de carregamento.
 	<progress></progress>
+----------------------------------------------------------------------------------------------------------------
+
+1.19 - Tabelas (p04):
+- tags básicas: <table>: Delimita a tabela, como as bordas mais exterior, definindo toda a tabela
+	<tr>: Delimitação das linhas da tabela ( atabela sempre vai ser escrita linha por linha)
+	<td>: Delimita a célula que compõe a tabela
+Código Ex:  
+<table>
+<tr>
+	<td>Célula 1</td>
+	<td>Célula 2</td>
+</tr>
+<tr>
+	<td>Célula 3</td>
+	<td>Célula 4</td>
+</tr>
+</table>
+
+-Parâmetros de tabelas: A maioria foi pro CSS, mais ainda restaram alguns:
+<td>
+°colspan <td colspan="x">: Serve para uma linha ocupar o espaço de duas(oumais) células(bem como o mesclar células 
+do excel).
+°rowspan <td rowspan="x">: Serve para Juntar duas (ou mais) células na mesma coluna.
+°border: <table border="x"> marca bordar nas colunas e tabelas.
+--Novos elementos de tabela no html5:
+<thead> define área de cabeçalho. usa o <th> </th> para separar o cabeçalho de acordo com as colunas da tabela
+<tfoot> define o rodpé
+<tbody> virou o corpo da tabela.
+-------------------------------------------------------------------------------------------------------------------
+1.21 Formulários:
+- São ferramentas únicas que permitem a interação entre usuário e o sistema. EX: formulário de busca, identificação(lo
+gin e senha), cadastro e de informação.
+-Tag <form> </form>= todas as informações vão dentro da tag form: vampos, botões, seletores e etc. precisa de 2 atributos básicos para
+funcionar adequadamente como:
+1- action = define para onde as informações do formulário vão ser enviadas.
+EX: <form action="recebe_form.php"  method="post">
+  ...
+  </form> 
+2-  method = define como os dados vão ser enviados como "get" e "post"
+. get = informação é enviada pelo navegador, salvando no computador as informações colocadas no formulário, deixando 
+os dados do usuário expostos(não muito recomendado por isso)
+. post =  esconde os dados do usuário e são enviados direto pela rede para a pagina php. os dados não ficaram visíveis.
+* Outros parâmetros do form:
+. autocomplete = Armazena os dados colocados no formulário e autocompleta o preenchimento em um futuro acesso.
+. enctype = permite que os formulários enviem não só textos e mas também arquivos.
+. name = dá um nome ao formulário, para tratar de forma mais fácil o formulário em outros linguagens.
+. novalidate = não valida a informação do formulário.
+. target = pra dizer se o formulário vai ser enviado para a mesma aba outra aba do navegador. 
+
+1.22 Campos de Texto (P05):
+- São campos para preenchimento com as informações dos usuários no formulário.
+Inscrito dentro de <form></fomr> indica que são informações dentro do formulário. 
+EX tag basica:
+<form method="post" action="recebe.php">
+	Nome:<input type="text" name="nome"><br>
+	Email:<input type="text name="email">
+</form>
+***outros parâmetros:
+° autocomplete = Armazena os dados colocados no formulário e autocompleta o preenchimento em um futuro acesso.
+° autofocus = Dá focus ao campo específico
+° disabled = Disabilita a inserção de informação no campo
+° max = Define número máximo de numeros informados no campo
+° maxlength = Define o tamanho máximo aceito pelo campo(ex: quantos caracteres serão aceitos)
+° min = Define número mínimo de numeros informados no campo
+° name = Nome de identificação do campo no formulário
+° pattern = Define o padrão do elemento a ser digitado (ex: cpf, traços e pontos)
+site para expressões regulares - """regexpal.com"""
+° placeholder = Descreve a informação a ser inserida dentro do campo.
+° readonly = Apenas leitura
+° required = Usado para informar se o campo é obrigatório ou não
+° size = Define a largura (em "px") do campo
+° type = Define o tipo do input
+° value = Define o valor dentro do input
+--- TAG textarea = insere um campo maior para maior descrição de textos
 
 
+1.23 - Botões:
+- Agente que submete(envia) o Formulário.
+Tag - <button type="button"> Clique </button> = botão simples, sem envio de informação ou ação. apenas clique.
+EX:  
+	<form method="post" action="recebe.php">	  
+     	- Email:<intput type="text"><br>
+     	  Senha:<input type="password"><br>
+		<button type="button">Enviar </button>(esse botão é simples, sem submissão)
+	</form>
+***botão de submissão: <button type="submit"> Enviar </button>(esse botão envia a informação)
+-Parametros do button:
+° autofocus  
+° disabled
+° name 
+° type: button, reset, submit 
+° value 
+*** o botão "submit" tem parâmetros próprios:
+<button type="submit">
+° formaction
+° formmethod
+° formnovalidate
+° formtarget
 
+1.24 Rótulos e agrupamentos de campos:
+- Ajuda a definir o que o programador espera do usuário para ser preenchido no usuário. Ex: campo tipo radius(bolinhas 
+para seleção do usuário).
+Tag <lable> = <form action="post">
+		<label for="homem">Homem</lable> 
+		<input type="radio" name="sexo" id="homem" value="home"><br>
+		<label for="mulher"><Mulher</lable>
+		<input type="radio" name="sexo" id="mulher" value "mulher><br>
+		</form>
 
+1.25 Campos de seleção/opção:
+* Checkbox (quadrado): Campo que permite ao usuário escolher a opção melhor o agrada, aceita mais de uma marcação
+Ex cod:
+<form method="post" action="recebe.php">
+	Quais cursos você fará?<br>
+	<input type="checkbox" name="html" value="1">HTML<br>
+	<input type="checkbox" name="css" value="1">CSS<br>
+	<input type="checkbox" name="javascript"value="1">JavaScript<br>
+</form>
+* Radio (circulo): campo que permite apenas uma opção ao usuário
+Ex cod:
+<form method="post" action="recebe.php">
+        Qual curso você fará?<br>
+        <input type="radio" name="curso" value="html">HTML<br>
+        <input type="radio" name="curso" value="css">CSS<br>
+        <input type="radio" name="curso" value="javascript">JavaScript<br><br>
+</form>	
 
+- Parâmetro ° checked = quando inserido no input, ele preseleciona a opão no formulário
+EX: 
+	<input type="radio" name="curso" value="html" checked>HTML<br>
 
+* Select (caixa para escolha) = permite escolha em lista a melhor opção a selecionar. Muito útil para listas grandes
+(ex lista de estados para escolha do usuário). TAG <select>
+							<option>1</option>
+							<option>2</option>
+								...
+						    </select>
+Ex cod:
+	<form method="post" action="#">
+ 	       Qual curso você fará?<br>
+		<select name="curso">
+   	     <option value="html">HTML</option>
+		<option value="css">CSS</option>
+		<option value="javascript">JavaScript</option>
+		</select>        
+	</form>	
 
+   
